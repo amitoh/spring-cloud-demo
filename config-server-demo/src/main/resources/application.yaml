@@ -3,6 +3,6 @@ spring:
     config:
       server:
         git:
-          uri:https://github.com/amitoh/spring-cloud-configurations
+          uri: https://github.com/amitoh/spring-cloud-configurations
 server:
-  port:9999
+  port: 9999
