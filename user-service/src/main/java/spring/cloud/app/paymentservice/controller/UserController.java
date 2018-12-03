@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import spring.cloud.app.paymentservice.rest.PaymentClient;
 
 import java.net.URI;
 
@@ -14,13 +15,13 @@ import java.net.URI;
 public class UserController {
 
     @Autowired
-    private RestTemplate restTemplate;
+    private PaymentClient paymentClient;
 
     @HystrixCommand(fallbackMethod = "fallback", groupKey = "user",
-            commandKey = "user", threadPoolKey = "user-pool")
+            commandKey = "go", threadPoolKey = "user-pool")
     @GetMapping("go")
     public String go() {
-        String entity = restTemplate.getForObject(URI.create("http://payment-service/payment/message"), String.class);
+        String entity = paymentClient.message();
         return "user service got " + entity;
     }
 
