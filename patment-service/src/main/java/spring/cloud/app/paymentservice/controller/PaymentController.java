@@ -1,16 +1,16 @@
-package spring.cloud.app.userservice.controller;
+package spring.cloud.app.paymentservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/payment")
+public class PaymentController {
 
-    @GetMapping("go")
-    public String go() {
-        return "user service";
+    @GetMapping("message")
+    public String message() {
+        return "payment service";
     }
 
 }

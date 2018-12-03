@@ -1,4 +1,4 @@
-package spring.cloud.app.userservice;
+package spring.cloud.app.paymentservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

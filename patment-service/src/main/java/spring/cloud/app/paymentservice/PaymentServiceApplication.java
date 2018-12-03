@@ -1,12 +1,12 @@
-package spring.cloud.app.userservice;
+package spring.cloud.app.paymentservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserServiceApplication {
+public class PaymentServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserServiceApplication.class, args);
+		SpringApplication.run(PaymentServiceApplication.class, args);
 	}
 }
