@@ -1,14 +1,16 @@
-package spring.cloud.app.paymentservice;
+package spring.cloud.app.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class PaymentServiceApplication {
+@EnableZuulProxy
+public class GatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PaymentServiceApplication.class, args);
+		SpringApplication.run(GatewayApplication.class, args);
 	}
 }
