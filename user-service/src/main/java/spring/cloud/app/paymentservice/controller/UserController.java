@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("user")
 public class UserController {
 
     @Autowired
@@ -17,7 +17,7 @@ public class UserController {
 
     @GetMapping("go")
     public String go() {
-        String entity = restTemplate.getForObject(URI.create("http://localhost:49340/payment/message"), String.class);
+        String entity = restTemplate.getForObject(URI.create("http://localhost:8080/payment-service/payment/message"), String.class);
         return "user service got " + entity;
     }
 
