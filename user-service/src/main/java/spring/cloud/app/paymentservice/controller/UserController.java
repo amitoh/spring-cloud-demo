@@ -17,7 +17,7 @@ public class UserController {
 
     @GetMapping("go")
     public String go() {
-        String entity = restTemplate.getForObject(URI.create("http://localhost:63437/payment/message"), String.class);
+        String entity = restTemplate.getForObject(URI.create("http://localhost:49340/payment/message"), String.class);
         return "user service got " + entity;
     }
 
